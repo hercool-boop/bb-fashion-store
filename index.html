@@ -70,7 +70,8 @@ nav a:hover {
 .hero img {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 400px;   /* ← uprav podľa chuti (napr. 350–450px) */
+  object-fit: cover;
 }
 
 section {
@@ -130,6 +131,18 @@ footer {
     max-width: 220px;
     margin: 10px auto;
   }
+
+  .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.logo img {
+  height: 40px;
+}
 }
 </style>
 
@@ -137,13 +150,17 @@ footer {
 <body>
 
 <header>
-  <h1>Surprise Banská Bystrica</h1>
-  <p class="tagline">Móda pre všetkých</p>
-  <nav>
-    <a href="#about">O nás</a>
-    <a href="#products">Produkty</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
+  <div class="topbar">
+    <div class="logo">
+  <img src="/logo.png" alt="Surprise logo">
+</div>
+
+    <nav>
+      <a href="#about">O nás</a>
+      <a href="#products">Produkty</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
 </header>
 
 <div class="hero">
