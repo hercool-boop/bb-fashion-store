@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BB Fashion Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://picsum.photos/1200/500') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>BB Fashion Store</h1>
+  <nav>
+    <a href="#about">O nás</a>
+    <a href="#products">Produkty</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Moderná móda pre každého</h2>
+  <p>Štýl, kvalita a komfort</p>
+  <a href="#products" class="btn">Pozrieť produkty</a>
+</div>
+
+<section id="about">
+  <h2>O nás</h2>
+  <p>
+    Sme BB Fashion Store – ponúkame moderné oblečenie za dostupné ceny.
+    Naším cieľom je priniesť štýl každému.
+  </p>
+</section>
+
+<section id="products">
+  <h2>Produkty</h2>
+  <div class="products">
+    
+    <div class="card">
+      <img src="https://picsum.photos/200?1" alt="" width="100%">
+      <h3>Tričko Basic</h3>
+      <p>Jednoduché a pohodlné</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/200?2" alt="" width="100%">
+      <h3>Mikina</h3>
+      <p>Ideálna na každý deň</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/200?3" alt="" width="100%">
+      <h3>Bunda</h3>
+      <p>Štýlová a teplá</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p>Email: info@bbfashion.sk</p>
+  <p>Instagram: @bbfashion</p>
+</section>
+
+<footer>
+  <p>© 2026 BB Fashion Store</p>
+</footer>
+
+</body>
+</html>
