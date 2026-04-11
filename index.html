@@ -6,16 +6,28 @@
 <title>Surprise Banská Bystrica | Móda pre všetkých</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: #faf8f5;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  padding: 15px 20px;
-  border-bottom: 2px solid #f0b16b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e9b06a;
 }
 
 .topbar {
@@ -24,24 +36,29 @@ header {
   align-items: center;
   max-width: 1100px;
   margin: auto;
+  padding: 12px 20px;
 }
 
 .logo img {
-  height: 70px;
-  max-height: 100%;
+  height: 60px;
+  display: block;
 }
 
 /* MENU */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 12px;
-  padding: 10px 18px;
-  border: 2px solid #f0b16b;
+  padding: 10px 16px;
+  border: 1px solid rgba(240, 177, 107, 0.6);
   border-radius: 8px;
-  font-weight: bold;
-  background: rgba(255,255,255,0.05);
-  transition: 0.2s;
+  font-weight: 500;
+  transition: 0.25s;
 }
 
 nav a:hover {
@@ -51,50 +68,182 @@ nav a:hover {
 
 /* HERO */
 .hero {
+  background: linear-gradient(135deg, #1d1d1d 0%, #2a2a2a 45%, #f0b16b 100%);
+  color: white;
   text-align: center;
-  background: #f5a45c;
-  padding: 10px 0;
+  padding: 60px 20px 30px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin: 0 0 15px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: rgba(255,255,255,0.9);
+}
+
+.btn {
+  display: inline-block;
+  background: #f0b16b;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+  transition: 0.25s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #f4bf82;
 }
 
 .hero img {
   width: 100%;
-  max-height: 400px;
+  max-width: 1100px;
+  max-height: 420px;
   object-fit: contain;
-}
-
-.map-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
   display: block;
-  margin: 15px auto;
-  border-radius: 10px;
+  margin: 0 auto;
+  border-radius: 18px;
 }
 
-/* SEKCIE */
+/* SECTIONS */
 section {
-  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  padding: 60px 20px;
 }
 
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.section-intro {
+  max-width: 700px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ABOUT BOX */
+.about-box {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* PRODUCTS */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
 .card {
-  border: 1px solid #ddd;
-  padding: 15px;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  margin: 8px 0 8px;
+}
+
+.card p {
+  margin: 0;
+  color: #666;
+}
+
+/* TRUST INFO */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.info-box {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+}
+
+.info-box p {
+  margin: 8px 0;
+}
+
+.address-text {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* MAP IMAGE */
+.map-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+  border-radius: 12px;
+}
+
+/* IFRAME */
+.map-frame {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 16px;
+  display: block;
+  margin-top: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* SOCIAL LINK */
+.social-link {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -102,19 +251,27 @@ footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 28px 20px;
+  margin-top: 30px;
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .topbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
-  nav a {
-    display: block;
-    margin: 5px auto;
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .map-frame {
+    height: 280px;
   }
 }
 </style>
@@ -149,53 +306,105 @@ footer {
 
 <section id="about">
   <h2>O nás</h2>
-  <p>
-    Sme BB Fashion Store – ponúkame moderné oblečenie za dostupné ceny.
-    Naším cieľom je priniesť štýl každému.
+  <p class="section-intro">
+    Miesto, kde nájdete modernú módu za dostupné ceny a príjemný osobný prístup.
   </p>
+
+  <div class="about-box">
+    <p>
+      Sme Surprise Banská Bystrica a ponúkame moderné oblečenie pre ženy, mužov aj deti.
+      Našim cieľom je priniesť štýl, pohodlie a dostupnú módu pre každého.
+    </p>
+    <p>
+      Radi vám poradíme priamo v predajni a pomôžeme vybrať kúsky, v ktorých sa budete cítiť dobre každý deň.
+    </p>
+  </div>
 </section>
 
 <section id="products">
   <h2>Produkty</h2>
+  <p class="section-intro">
+    Výber oblečenia na bežné nosenie aj štýlové outfity do mesta.
+  </p>
+
   <div class="products">
-    
     <div class="card">
-      <img src="https://picsum.photos/200?1">
+      <img src="https://picsum.photos/400/300?1" alt="Tričko Basic">
       <h3>Tričko Basic</h3>
-      <p>Jednoduché a pohodlné</p>
+      <p>Jednoduchý a pohodlný základ do každého šatníka.</p>
     </div>
 
     <div class="card">
-      <img src="https://picsum.photos/200?2">
+      <img src="https://picsum.photos/400/300?2" alt="Mikina">
       <h3>Mikina</h3>
-      <p>Ideálna na každý deň</p>
+      <p>Pohodlný kúsok na každý deň aj voľný čas.</p>
     </div>
 
     <div class="card">
-      <img src="https://picsum.photos/200?3">
+      <img src="https://picsum.photos/400/300?3" alt="Bunda">
       <h3>Bunda</h3>
-      <p>Štýlová a teplá</p>
+      <p>Praktická a štýlová voľba do chladnejšieho počasia.</p>
     </div>
+  </div>
+</section>
 
+<section id="why-us">
+  <h2>Prečo si vybrať nás</h2>
+  <div class="contact-grid">
+    <div class="info-box">
+      <h3>Osobný prístup</h3>
+      <p>Radi poradíme s výberom priamo v predajni.</p>
+    </div>
+    <div class="info-box">
+      <h3>Dostupné ceny</h3>
+      <p>Moderná móda za ceny, ktoré dávajú zmysel.</p>
+    </div>
+    <div class="info-box">
+      <h3>Pre celú rodinu</h3>
+      <p>Ponuka pre ženy, mužov aj deti.</p>
+    </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Kontakt</h2>
-  <p>Email: info@bbfashion.sk</p>
-  <p>Instagram: @bbfashion</p>
+  <p class="section-intro">
+    Nájdete nás priamo v Banskej Bystrici. Zastavte sa osobne, radi vás privítame.
+  </p>
 
-  <h2>Otváracie hodiny</h2>
-  <p>Pondelok až piatok: 8:30 - 13:00, 13:30 - 17:00</p>
-  <p>Sobota: 9:00 - 12:00 (2. a 3. sobota v mesiaci)</p>
+  <div class="contact-grid">
+    <div class="info-box">
+      <h3>Kontaktné údaje</h3>
+      <p>Email: info@bbfashion.sk</p>
+      <p>
+        Instagram:
+        <a href="https://instagram.com/bbfashion" target="_blank" class="social-link">@bbfashion</a>
+      </p>
+    </div>
 
-  <h2>Kde nás nájdete</h2>
-  Partizánska cesta 8, Banská Bystrica (bývalý Paplónik na Sídlisku)
-  <div">
-  <img src="/mapka.png" alt="mapa" class="map-image">
+    <div class="info-box">
+      <h3>Otváracie hodiny</h3>
+      <p>Pondelok až piatok: 8:30 - 13:00, 13:30 - 17:00</p>
+      <p>Sobota: 9:00 - 12:00 (2. a 3. sobota v mesiaci)</p>
+    </div>
   </div>
-<br>
-<iframe src="https://www.google.com/maps/embed?pb=!3m2!1ssk!2ssk!4v1775686793649!5m2!1ssk!2ssk!6m8!1m7!1sYz4y4ODqhDqyLz1aM2RuKw!2m2!1d48.73928515926812!2d19.15811513169717!3f151.38127346515753!4f5.247086982770625!5f0.9972489675459463" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <div class="info-box" style="margin-top: 24px;">
+    <h3>Kde nás nájdete</h3>
+    <p class="address-text">
+      Partizánska cesta 8, Banská Bystrica (bývalý Paplónik na Sídlisku)
+    </p>
+
+    <img src="/mapka.png" alt="Mapa predajne" class="map-image">
+
+    <iframe
+      class="map-frame"
+      src="https://www.google.com/maps/embed?pb=!3m2!1ssk!2ssk!4v1775686793649!5m2!1ssk!2ssk!6m8!1m7!1sYz4y4ODqhDqyLz1aM2RuKw!2m2!1d48.73928515926812!2d19.15811513169717!3f151.38127346515753!4f5.247086982770625!5f0.9972489675459463"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
 
 <footer>
